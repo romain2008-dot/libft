@@ -1,37 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 23:57:17 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/03 23:57:17 by romgutie         ###   ########.fr       */
+/*   Created: 2025/11/04 14:52:40 by romgutie          #+#    #+#             */
+/*   Updated: 2025/11/04 14:53:09 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*ptr;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	ptr = (unsigned char *)s;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	if (!s && !d)
+		return (dest);
 	while (n > 0)
 	{
-		*ptr++ = (unsigned char)c;
+		*d++ = *s++;
 		n--;
 	}
-	return (s);
+	return (dest);
 }
-
 /*
+#include <stdio.h>
+
 int main(void)
 {
-    char str1[20] = "Hello World!";
-    ft_memset(str1 + 6, '*', 5);
-    printf("%s\n", str1);
+    char src[] = "test";
+    char dest[20];
+
+    ft_memcpy(dest, src, 5);
+    printf("%s\n", dest);
+
+    ft_memcpy(dest, src, 2);
+    dest[2] = '\0';
+    printf("%s\n", dest);
+
+    ft_memcpy(dest, src, 0);
+    printf("%s\n", dest);
     return 0;
 }
 */
