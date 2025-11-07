@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 00:35:12 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/07 00:31:04 by romgutie         ###   ########.fr       */
+/*   Created: 2025/11/07 00:56:59 by romgutie          #+#    #+#             */
+/*   Updated: 2025/11/07 00:56:59 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*str;
+	const unsigned char	*d1;
+	const unsigned char	*d2;
 
-	str = (const unsigned char *)s;
+	d1 = (const unsigned char *)s1;
+	d2 = (const unsigned char *)s2;
 	while (n > 0)
 	{
-		if (*str == (unsigned char)c)
-			return ((void *)str);
-		str++;
+		if (*d1 != *d2)
+			return (*d1 - *d2);
+		d1++;
+		d2++;
 		n--;
 	}
-	return (NULL);
+	return (0);
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-    char	s[] = "Hello World!";
-    char	*res;
+    char str1[] = "Hello, world!";
+    char str2[] = "Hello, world!";
+    char str3[] = "Hello, World!";
 
-    res = ft_memchr(s, 'o', 12);
-    printf("%c %ld\n", *res, res - s);
-    res = ft_memchr(s, 'z', 12);
-	if (res)
-		printf("%c %ld\n", *res, res - s);
-	else
-		printf("bah pas trouvé");
+    printf("%d\n", ft_memcmp(str1, str2, 13));
+    printf("%d\n", ft_memcmp(str1, str3, 13));
     return (0);
 }*/
