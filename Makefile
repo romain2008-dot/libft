@@ -21,7 +21,9 @@ SRC     = ft_isalpha.c \
           ft_memcmp.c \
           ft_strnstr.c \
 		  ft_atoi.c \
-		  ft_calloc.c
+		  ft_calloc.c \
+		  ft_strdup.c \
+		  ft_substr.c
 OBJ     = ${SRC:.c=.o}
 CFLAGS  = -Wall -Werror -Wextra
 COMPILE = $(CC) $(CFLAGS) -c
