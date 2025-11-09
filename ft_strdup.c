@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 01:06:26 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/09 02:39:05 by romgutie         ###   ########.fr       */
+/*   Created: 2025/11/09 18:45:17 by romgutie          #+#    #+#             */
+/*   Updated: 2025/11/09 18:45:26 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdint.h>
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strdup(const char *src)
 {
-	void	*s;
+	char	*dst;
+	size_t	i;
 
-	if (size != 0 && count > SIZE_MAX / size)
+	dst = malloc(ft_strlen(src) + 1);
+	if (dst == NULL)
 		return (NULL);
-	s = malloc(count * size);
-	if (!s)
-		return (NULL);
-	ft_bzero(s, count * size);
-	return (s);
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }
 /*
 #include <stdio.h>
-int main(void)
+int	main(void)
 {
-	size_t i;
-	int *tab;
-
-	tab = ft_calloc(5, sizeof(int));
-	for (i = 0; i < 5; i++)
-		printf("%d\n", tab[i]);
-	free(tab);
-	return (0);
+	printf("%s\n", ft_strdup("test"));
 }*/
