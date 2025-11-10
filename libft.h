@@ -6,7 +6,7 @@
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 00:15:44 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/10 00:59:36 by romgutie         ###   ########.fr       */
+/*   Updated: 2025/11/10 01:25:26 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ void	*ft_calloc(size_t n, size_t size);
 char	*ft_strdup(const char *src);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
