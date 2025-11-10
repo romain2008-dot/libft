@@ -14,5 +14,24 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	size_t	s1_len;
+	int		s2_len;
+	char	*dst;
 
+	if (!s1 || !s2)
+		return (NULL);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	dst = malloc(s1_len + s2_len + 1);
+	if (!dst)
+		return (NULL);
+	ft_memcpy(dst, s1, s1_len);
+	ft_memcpy(dst + s1_len, s2, s2_len + 1);
+	return (dst);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	printf("%s", ft_strjoin("test", "1test"));
+}*/

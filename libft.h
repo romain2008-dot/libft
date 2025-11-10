@@ -6,7 +6,7 @@
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 00:15:44 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/09 23:41:00 by romgutie         ###   ########.fr       */
+/*   Updated: 2025/11/10 00:59:36 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t n, size_t size);
 char	*ft_strdup(const char *src);
-char	*ft_substr(char const *s, unsigned int start,size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+
 
 #endif
