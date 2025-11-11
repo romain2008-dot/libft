@@ -1,50 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 23:49:23 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/11 23:49:23 by romgutie         ###   ########.fr       */
+/*   Created: 2025/11/12 00:13:31 by romgutie          #+#    #+#             */
+/*   Updated: 2025/11/12 00:13:31 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char			*str;
 	unsigned int	i;
 
 	if (!s || !f)
-		return (NULL);
-	str = malloc(ft_strlen(s) + 1);
-	if (!str)
-		return (NULL);
+		return ;
 	i = 0;
 	while (s[i])
 	{
-		str[i] = f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
 }
 /*
 #include <stdio.h>
-char	change_char(unsigned int i, char c)
+void	add_index(unsigned int i, char *c)
 {
-	(void)i;
-	return (ft_toupper(c));
+	*c = *c + i;
 }
-int main(void)
+int	main(void)
 {
-	char *res;
-
-	res = ft_strmapi("salut", change_char);
-	printf("%s\n", "salut");
-	printf("%s\n", res);
-	free(res);
-	return 0;
+	char str[] = "abcd";
+	ft_striteri(str, add_index);
+	printf("%s\n", str);
+	return (0);
 }*/
