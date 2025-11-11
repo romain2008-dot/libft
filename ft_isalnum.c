@@ -6,11 +6,11 @@
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 23:14:16 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/03 23:14:16 by romgutie         ###   ########.fr       */
+/*   Updated: 2025/11/11 18:25:14 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnnum(int c)
+int	ft_isalnum(int c)
 {
 	if ((c >= 48 && c <= 57)
 		|| (c >= 65 && c <= 90)
