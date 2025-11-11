@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 	if (nbr < 0)
 	{
 		s[0] = '-';
-		nbr = -nbr;
+		nbr *= -1;
 	}
 	if (nbr == 0)
 		s[0] = '0';
