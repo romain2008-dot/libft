@@ -6,7 +6,7 @@
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 15:35:47 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/12 15:35:47 by romgutie         ###   ########.fr       */
+/*   Updated: 2025/11/12 23:18:12 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (nbr > 9)
 	{
 		ft_putnbr_fd(nbr / 10, fd);
-		nbr= nbr % 10;
+		nbr = nbr % 10;
 	}
 	if (nbr < 9)
 		ft_putchar_fd(nbr + '0', fd);
