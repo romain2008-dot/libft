@@ -6,7 +6,7 @@
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 00:33:04 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/14 16:24:12 by romgutie         ###   ########.fr       */
+/*   Updated: 2025/11/17 23:26:14 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	s1_len;
-	size_t		s2_len;
+	size_t	s2_len;
 	char	*dst;
 
 	if (!s1 || !s2)
