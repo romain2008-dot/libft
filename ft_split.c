@@ -6,7 +6,7 @@
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 23:00:28 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/10 23:00:39 by romgutie         ###   ########.fr       */
+/*   Updated: 2025/11/18 00:46:43 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static char	*word_dup(const char *s, char c)
 	len = 0;
 	while (s[len] && s[len] != c)
 		len++;
-	word = (char *)malloc(sizeof(char) * (len + 1));
+	word = malloc(len + 1);
 	if (!word)
 		return (NULL);
 	i = 0;
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	tab = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	tab = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!tab)
 		return (NULL);
 	i = 0;
