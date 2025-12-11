@@ -1,4 +1,5 @@
 libftTester/
+Moumounator_libft/
 *.o
 libft.a
 a.out
