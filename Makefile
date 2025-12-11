@@ -9,7 +9,7 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 OBJ     = ${SRC:.c=.o}
 CFLAGS  = -Wall -Werror -Wextra
 COMPILE = $(CC) $(CFLAGS) -c
-LIB     = ar rc $(NAME)
+LIB     = ar rcs $(NAME)
 REMOVE  = rm -f
 
 all: $(NAME)
