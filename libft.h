@@ -6,7 +6,7 @@
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 00:15:44 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/12 00:27:52 by romgutie         ###   ########.fr       */
+/*   Updated: 2025/12/12 14:44:20 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
