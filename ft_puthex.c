@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 23:37:13 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/03 23:37:13 by romgutie         ###   ########.fr       */
+/*   Created: 2025/12/09 23:10:41 by romgutie          #+#    #+#             */
+/*   Updated: 2025/12/09 23:10:59 by romgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+int	ft_puthex(unsigned int n, int uppercase, int fd)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	char	*base;
+	int		count;
+
+	if (uppercase)
+		base = "0123456789ABCDEF";
+	else
+		base = "0123456789abcdef";
+	count = 0;
+	if (n >= 16)
+		count += ft_puthex(n / 16, uppercase, fd);
+	count += ft_putchar(base[n % 16], fd);
+	return (count);
 }

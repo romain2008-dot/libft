@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yflohic <yflohic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 00:15:44 by romgutie          #+#    #+#             */
-/*   Updated: 2025/12/12 14:44:20 by romgutie         ###   ########.fr       */
+/*   Updated: 2026/02/27 10:03:51 by yflohic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 typedef struct s_list
 {
@@ -56,6 +61,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_putfloat(double f, int precision, int fd);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -65,5 +71,17 @@ void	ft_lstdelone(t_list *lst, void (*del) (void *));
 void	ft_lstclear(t_list **lst, void (*del) (void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+int		ft_putchar(int c, int fd);
+int		ft_putstr(const char *str, int fd);
+int		ft_putptr(void *ptr, int fd);
+int		ft_putnbr(int n, int fd);
+int		ft_putnbr_u(unsigned int n, int fd);
+int		ft_puthex(unsigned int n, int uppercase, int fd);
+int		ft_printf(int f, const char *format, ...);
+int		ft_dispatch(const char *format, int *i, va_list args, int fd);
+int		ft_sqrt(int nb);
+int		ft_strcmp(const char *s1, const char *s2);
+char	*get_next_line(int fd);
+char	*ft_strjoin_gnl(char const *s1, char const *s2);
 
 #endif

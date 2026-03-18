@@ -77,7 +77,7 @@ cc -Wall -Wextra -Werror your_file.c -L. -lft -o your_program
 ### Documentation and References
 
 - YouTube tutorials  
-- Linux man pages: `man [function]` for detailed documentation on standard functions
+- Linux man pages: `man [function]` for detailed documentation on standard functions  
 - [Koor](https://koor.fr/C/Index.wp) — French-language documentation
 
 ### Use of AI
@@ -85,12 +85,12 @@ cc -Wall -Wextra -Werror your_file.c -L. -lft -o your_program
 AI was not used to generate any code. It was only used to clarify certain concepts when necessary.
 
 Development relied on:
-- Careful reading of man pages to understand how each function works
+- Careful reading of man pages to understand how each function works  
 - Systematic testing to verify correctness
 
 ## Technical Notes
 
-- All files are compiled with the flags `-Wall -Wextra -Werror`
-- No global variables are used
-- Helper functions are declared as `static` to restrict their scope
-- The project strictly follows the 42 Norm
+- All files are compiled with the flags `-Wall -Wextra -Werror`  
+- No global variables are used  
+- Helper functions are declared as `static` to restrict their scope  
+- The project strictly follows the 42 Norm  

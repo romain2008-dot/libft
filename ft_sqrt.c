@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romgutie <romgutie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yflohic <yflohic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 23:37:13 by romgutie          #+#    #+#             */
-/*   Updated: 2025/11/03 23:37:13 by romgutie         ###   ########.fr       */
+/*   Created: 2026/02/27 10:02:22 by yflohic           #+#    #+#             */
+/*   Updated: 2026/02/27 16:43:39 by yflohic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+int	ft_sqrt(int nb)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	int	i;
+
+	i = 1;
+	while (i * i <= nb)
+		i++;
+	return (i - 1);
 }
